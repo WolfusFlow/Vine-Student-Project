@@ -10,13 +10,13 @@ Client can see in separate table Vines that he want to try in future.
 
 
 ## Backend
-__Programming language is *any*__
+__Programming language is *any*__ </br>
 Have to be a docker-compose containing __API Service__, __Worker__(for backend operations), __Broker__(message broker), __PostgreSQL__(database)</br>
 Message broker can be chosen from one of theese -> __RabbitMQ__, __Kafka__, __NATS__.</br>
 
 #### Backend logic:
 **API Service:**
-Realise API for client side and do business logic
+Implement API for client side and do business logic
 - REST or gRPC API
 - Methods for realisation - see **API Description** segment
 - Have to be an Authorization(Basic Auth)
@@ -53,7 +53,7 @@ Description of API
 
 
 ## Database
-**Database Vines:**
+**Database Vines:**</br>
 Table **Already_have_vine**:
 - ID (Int)
 - Name (String)
