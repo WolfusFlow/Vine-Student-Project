@@ -1,12 +1,12 @@
 
 # What have to be Done
-Project for working with information about Vines.
+Project for working with information about Wines.
 
 #### Business functions:
-Client have to Authorize on App.
-If valid -> Get Data about vines on Page.
-Client have to be able to Add Vine(s), Edit Vine Data, Delete Vines.
-Client can see in separate table Vines that he want to try in future.
+Client can Authorize on App.
+If valid -> Get Data about wines on Page.
+Client have to be able to Add Wine(s), Edit Wine Data, Delete Wines.
+Client can add Wines to wishlist table for future taste.
 
 
 ## Backend
@@ -38,13 +38,13 @@ All important stemps have to be logged.
 ## API Description
 Description of API
 - HealthCheck. Returns "Status": "UP"
-- Information. Shows information about service("This is Vine Backend Service")
-- Login. For Authorization. (log/pass have to be in env variables)
-- Add/Create vine(s). Have to support single addition or multiple of vines.
-- Get Vine. Get Particular Vine depends on some condition or return not found.
-- Get Vines. Get All Vines or Vines that have a common attribute(s).
-- Update Vine. Update information of a particular Vine.
-- Delete Vines. Delete vines that will be in an incoming list.
+- Information. Shows information about service("This is Wine Backend Service")
+- Login. For Authorization. (log/pass have to be in environment variables)
+- Add/Create wine(s). Have to support single addition or multiple of wines.
+- Get Wine. Get Particular Wine depends on some condition or return not found.
+- Get Wines. Get All Wines or Wines that have a common attribute(s).
+- Update Wine. Update information of a particular Wine.
+- Delete Wines. Delete wines that will be in an incoming list.
 - Add Grape Sort.
 - Get All GrapeSorts.
 - Get Grape Sort. (By Name)
@@ -53,11 +53,11 @@ Description of API
 
 
 ## Database
-**Database Vines:**</br>
-Table **Already_have_vine**:
+**Database Wines:**</br>
+Table **Already_have_wine**:
 - ID (Int)
 - Name (String)
-- Vine_Type (Enum(White, Rose, Red, Other))
+- Wine_Type (Enum(White, Rose, Red, Other))
 - Year (String or DateTime)
 - Country (String)
 - Grape_Sort (Grape_sort_name relation)
@@ -87,10 +87,10 @@ At first - Authorize client.
 
 If invalid Auth -> Show message "Wrong Credentials". Else -> Show Main Page. (Send request to backend to get Data)
 
-Main Window is just a table with all the vines that client tasted or have.
-Vines have to have attributes:
+Main Window is just a table with all the wines that client tasted or have.
+Wines have to have attributes:
 - Name
-- Vine Type(White, Rose, Red, Other)
+- Wine Type(White, Rose, Red, Other)
 - Year
 - Country
 - Grape Sort (Drop down list with grape sorts)
@@ -99,21 +99,21 @@ Vines have to have attributes:
 - Amount that client have(How many bottles do client have)
 - "How it was" (Do client like it?) (Very well, Good, Average, Not Good Enought, Terrible)
 
-Additional window Containing Window with list of vines to test in future:
+Additional window Containing Window with list of wines to test in future:
 - Name
 - Year
 - Country
 - Grape Sort (Drop down list with grape sorts)
 - Additional info
 
-Switching between "Tasted"(Vines that client have) and "Want to Taste" vines have to be on top of the application.
+Switching between "Tasted"(Wines that client have) and "Want to Taste" wines have to be on top of the application.
 
 If client edit table - send request to backend only when he clicks update button, **not on every change**
 
-Button Add - Form for adding Vine. User can Add multiple Vines. When done -> send a single request on backend
+Button Add - Form for adding Wine. User can Add multiple Wines. When done -> send a single request on backend
 
-On each vine have to be an icon for editing Vine. Edit information about Vine and send info on backend
+On each wine have to be an icon for editing Wine. Edit information about Wine and send info on backend
 
-Button For Deleting Vines - After it was clicked client may choose some bottles and press "Confirm Delete" After That the request will go to backend
+Button For Deleting Wines - After it was clicked client may choose some bottles and press "Confirm Delete" After That the request will go to backend
 
 Refresh button -> to get data againg from backend as we just entered app
